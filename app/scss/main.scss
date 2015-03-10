@@ -1,0 +1,96 @@
+/******************************************************************
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+******************************************************************/
+
+// set asset directory
+$asset-dir: "content";
+$asset-images-dir: $asset-dir + "/images/";
+$base-url: "";
+
+/******************************************************************
+  Imports
+******************************************************************/
+// import overrides
+@import "settings";
+
+// import normalize
+@import "normalize";
+
+// import mixins
+@import "mixins";
+
+// fonts
+// @import "../../Content/fonts/fonts";
+
+// import icons
+// @import "icons";
+
+// foundation.scss
+@import "foundation/foundation";
+
+// remember, mobile first
+@import "media/small";
+
+@media #{$small-only} {
+  @import "media/small-only";
+}
+
+@media #{$medium-up} {
+  @import "media/medium";
+}
+
+@media #{$medium-only} {
+  @import "media/medium-only";
+}
+
+@media #{$large-up} {
+  @import "media/large";
+}
+
+@media #{$large-only} {
+  @import "media/large-only";
+}
+
+@media #{$xlarge-up} {
+  @import "media/xlarge";
+}
+
+@media #{$xlarge-only} {
+  @import "media/xlarge-only";
+}
+
+@media #{$xxlarge-up} {
+  @import "media/xxlarge";
+}
+
+@media #{$xxlarge-only} {
+  @import "media/xxlarge-only";
+}
+
+// retina (2x resolution devices)
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  @import "media/2x";
+}
+
+// iphone 5
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  @import "media/iphone5";
+}
+
+// print
+@media print {
+  @import "media/print";
+}
+
+.styleguide {
+  .has-tip {
+    display: block;
+    padding: 1em 0; 
+  }
+}

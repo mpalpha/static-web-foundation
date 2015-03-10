@@ -1,0 +1,109 @@
+@import "foundation/components/type";
+
+/* begin type override */
+$alt-body-color: #2e2014;
+$primary-color: #22556d;
+$secondary-color: #58b8d2;
+$alert-color: #ef533e;
+$success-color: #fcfdfe;
+$warning-color: #f08a24;
+$info-color: #cccccc;
+
+body {
+  letter-spacing: 0.050em;
+}
+
+ul {
+  margin-left: 1.5rem;
+}
+
+/* add global text shadow to headings and paragraphs */
+h1, h2, h3, h4, h5, h6, p, a, span {
+  text-rendering: auto;
+  -webkit-text-stroke: rgba($body-font-color, 0.5);
+  text-shadow: 0 0 0.005em rgba($body-font-color, 0.5);
+  &.success, &.disabled {
+    -webkit-text-stroke: 0.005em rgba($success-color, 0.5);
+    text-shadow: 0 0 0.005em rgba($success-color, 0.5);
+  }
+  &.secondary, &.secondary-color {
+    -webkit-text-stroke: 0.005em rgba($secondary-color, 0.5);
+    text-shadow: 0 0 0.005em rgba($secondary-color, 0.5);
+  }
+  &.alert, &.alert-color, &.h2 {
+    -webkit-text-stroke: 0.005em rgba($alert-color, 0.5);
+    text-shadow: 0 0 0.005em rgba($alert-color, 0.5);
+  }
+}
+
+footer, nav {
+  h1, h2, h3, h4, h5, h6, p, a, span {
+    letter-spacing: normal;
+  }
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+h5 {
+}
+
+h6 {
+}
+
+.h1 {
+  @extend h1;
+}
+
+.h2 {
+  @extend h2;
+}
+
+.h3 {
+  @extend h3;
+}
+
+.h4 {
+  @extend h4;
+}
+
+.h5 {
+  @extend h5;
+}
+
+.h6 {
+  @extend h6;
+}
+
+.p {
+  @extend p;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.secondary-color {
+  color: $secondary-color;
+}
+
+.info-color {
+  color: $info-color;
+}
+
+.warning-color {
+  color: $warning-color;
+}
+
+.alert-color {
+  color: $alert-color;
+}

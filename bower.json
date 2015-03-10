@@ -1,0 +1,9 @@
+{
+  "name": "static web foundation",
+  "author": "Jason Lusk",
+  "url": "https://github.com/mpalpha/static-web-foundation.git",
+  "dependencies": {},
+  "devDependencies": {
+    "foundation": "~5.5.1"
+  }
+}
